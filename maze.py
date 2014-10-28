@@ -8,16 +8,16 @@ GREEN = (0, 255, 0)
 # Define some variables
 clock = pygame.time.Clock()
 done = False
-
 WIDTH = 500
 HEIGHT = 700
 block_size = 20
 
-# Initiate screen
+#------ Initiate screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 # An array containing all the black square indices
 entire_maze = []
+
 
 def generate_border(width, height):
 	list = []
@@ -136,6 +136,9 @@ while not done:
 	# -- update the screen with whatever we've drawn.
 	pygame.display.flip()
 	
-	# --- Limit to 60 frames per second
-	clock.tick(60)
+	
+	#I CHANGED THIS TO 10 SECONDS PER FRAME SO THAT I COULD SEE IT MOVE BETTER!!!!
+	
+	# --- Limit to 10 frames per second
+	clock.tick(10)
 	

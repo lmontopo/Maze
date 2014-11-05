@@ -1,6 +1,6 @@
 #from deterministic_maze import generate_maze
 from generator_random_dfs import generate_maze
-from solver_bfs import Solver
+from solver_dfs import Solver
 import pygame
 import pygame.font
 
@@ -69,9 +69,8 @@ if __name__ == '__main__':
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
     # Construct the entire maze
-    # entire_maze = generate_maze(WIDTH, HEIGHT, BLOCK_SIZE)
+    # entire_maze = generate_maze(WIDTH / BLOCK_SIZE, HEIGHT / BLOCK_SIZE)
   
-
     # Construct random maze
     entire_maze = generate_maze(WIDTH / BLOCK_SIZE, HEIGHT / BLOCK_SIZE)
 

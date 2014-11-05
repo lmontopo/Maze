@@ -1,7 +1,8 @@
 import random
 
 # Generates the entire maze
-def generate_maze(maze, width, height, block_size):
+def generate_maze(width, height, block_size):
+    maze = generate_blank_maze(width / block_size, height / block_size)
     add_border(maze)
     add_block(maze, 6, (height / block_size) - 4, 2, 2)
     add_block(maze, 6, (height / block_size) - 4, 4, 6)

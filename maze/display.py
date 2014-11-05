@@ -1,10 +1,11 @@
-from maze import generate_maze, generate_blank_maze
-from solver import Solver
+#from deterministic_maze import generate_maze
+from generator_random_dfs import generate_maze
+from solver_bfs import Solver
 import pygame
 import pygame.font
 
-WIDTH = 500
-HEIGHT = 700
+WIDTH = 420
+HEIGHT = 420
 BLOCK_SIZE = 20
 done = False
 
@@ -68,10 +69,12 @@ if __name__ == '__main__':
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
     # Construct the entire maze
-    entire_maze = generate_maze(generate_blank_maze(WIDTH / BLOCK_SIZE, HEIGHT / BLOCK_SIZE), 
-                                WIDTH,
-                                HEIGHT,
-                                BLOCK_SIZE)
+    # entire_maze = generate_maze(WIDTH, HEIGHT, BLOCK_SIZE)
+  
+
+    # Construct random maze
+    entire_maze = generate_maze(WIDTH / BLOCK_SIZE, HEIGHT / BLOCK_SIZE)
+
     # Create maze solver object
     solver = Solver(entire_maze, (0, 0), ((WIDTH / BLOCK_SIZE) - 1, (HEIGHT / BLOCK_SIZE) - 1)) 
 

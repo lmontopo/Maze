@@ -15,10 +15,10 @@ class MazeGenerator:
         return horizontal_validity and vertical_validity and not_previously_travelled
 
     def valid_neighbors(self, pos):
-        left = (pos[0] - 2, pos[1])
-        right = (pos[0] + 2, pos[1])
-        up = (pos[0], pos[1] - 2)
-        down = (pos[0], pos[1] + 2)
+        left = (pos[0], pos[1] - 2)
+        right = (pos[0], pos[1] + 2)
+        up = (pos[0] - 2, pos[1])
+        down = (pos[0] + 2, pos[1])
 
         neighbors = [left, right, up, down]
         return filter(lambda x: self.is_valid(x), neighbors)

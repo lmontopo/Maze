@@ -1,12 +1,12 @@
 import random
 
 # Generates the entire maze
-def generate_maze(width, height, block_size):
-    maze = generate_blank_maze(width / block_size, height / block_size)
+def generate_maze(width, height):
+    maze = generate_blank_maze(width, height)
     add_border(maze)
-    add_block(maze, 6, (height / block_size) - 4, 2, 2)
-    add_block(maze, 6, (height / block_size) - 4, 4, 6)
-    add_block(maze, 6, (height / block_size) - 4, 8, 2)
+    add_block(maze, 6, height - 4, 2, 2)
+    add_block(maze, 6, height - 4, 4, 6)
+    add_block(maze, 6, height - 4, 8, 2)
     return maze
 
 def generate_random_maze(width, height):
